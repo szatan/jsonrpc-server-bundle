@@ -30,7 +30,7 @@ final class JsonRpcController extends RpcController
 
         $jsonrpc = json_decode($request->getContent());
         if (null === $jsonrpc || json_last_error() !== JSON_ERROR_NONE) {
-            throw new BadRequestHttpException('Not an valid JSON request');
+            throw new BadRequestHttpException('Not a valid JSON request');
         }
 
         $singleRequest = false;
